@@ -1,11 +1,13 @@
 import os
 from solutions.DayOneSolution import DayOneSolution
+from solutions.DayTwoSolution import DayTwoSolution
 
 
 class Solver:
 
     def __init__(self):
-        self.solution_map = {'1': DayOneSolution("dayone.txt")}
+        self.solution_map = {'1': DayOneSolution("dayone.txt"),
+                             '2': DayTwoSolution("daytwo.txt")}
 
     def solve_problem(self, solution):
         solution.part_a()
