@@ -35,12 +35,11 @@ class DayThreeSolution(SolutionTemplate):
         return tree_count
 
     def get_full_tree_map(self):
-        number_of_rows = len(self.input_contents)
         tree_map = []
         for input_line in self.input_contents:
-            # Get the line, copy until the length of the line is >= 8*number of rows (extra buffer)
+            # Get the line, copy until the length of the line is >= number of rows so far plus one extra line
             temp_input_line = input_line
-            while len(temp_input_line) < number_of_rows*8:
+            while len(temp_input_line) < len(tree_map)*len(input_line):
                 temp_input_line += input_line
             tree_map.append(temp_input_line)
         return tree_map
