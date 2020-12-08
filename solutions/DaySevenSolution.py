@@ -6,7 +6,6 @@ class DaySevenSolution(SolutionTemplate):
     def __init__(self, input_file_name):
         super().__init__(input_file_name)
         self.parent_child_map, self.child_parent_map = self.process_rules()
-        print(self.parent_child_map)
 
     def part_a(self):
         print("Day Seven, part A")
@@ -30,28 +29,6 @@ class DaySevenSolution(SolutionTemplate):
     def part_b(self):
         print("Day Seven, part B")
         print(self.get_current_bag_level('shiny gold', 1) - 1) # Don't count yourself
-        '''bags_already_checked = set()
-        total_count_map = {}
-        bags_to_check = self.parent_child_map["shiny gold"]
-        current_bag_checker_index = 0
-        current_count = 1
-
-        while current_bag_checker_index < len(bags_to_check):
-            number, bag_to_check = bags_to_check[current_bag_checker_index]
-            if bag_to_check != 'other' and bag_to_check not in bags_already_checked:
-                current_number = int(number)
-
-                bags_already_checked.add(bag_to_check)
-
-                if bag_to_check in self.parent_child_map:
-                    for child_number, child_description in self.parent_child_map[bag_to_check]:
-                        if child_number != 'no':
-                            child_number = int(child_number)*int(number)
-                            bags_to_check.append((child_number, child_description))
-
-            current_bag_checker_index += 1
-        total_bag_count = 0
-        print(total_bag_count)'''
 
 
     def process_rules(self):
