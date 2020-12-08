@@ -4,6 +4,7 @@ from solutions.DayTwoSolution import DayTwoSolution
 from solutions.DayThreeSolution import DayThreeSolution
 from solutions.DayFiveSolution import DayFiveSolution
 from solutions.DaySixSolution import DaySixSolution
+from solutions.DaySevenSolution import DaySevenSolution
 from solutions.DayEightSolution import DayEightSolution
 
 
@@ -15,6 +16,7 @@ class Solver:
                              '3': DayThreeSolution("daythree.txt"),
                              '5': DayFiveSolution("dayfive.txt"),
                              '6': DaySixSolution("daysix.txt"),
+                             '7': DaySevenSolution("dayseven.txt"),
                              '8': DayEightSolution("dayeight.txt")}
 
     def solve_problem(self, solution):
